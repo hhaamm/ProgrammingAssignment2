@@ -31,3 +31,17 @@ cacheSolve <- function(x) {
   x$setinverse(inv)
   inv
 }
+
+# Example output of testing this code:
+# > c <- makeCacheMatrix(matrix(c(4,7,2,6), 2, 2))
+# > c2 <- cacheSolve(c)
+# > c2 <- cacheSolve(c)
+# getting cached data
+# > c$get() %*% c2
+# [,1]         [,2]
+# [1,] 1.000000e+00 1.110223e-16
+# [2,] 1.110223e-16 1.000000e+00
+# > round(c$get() %*% c2)
+# [,1] [,2]
+# [1,]    1    0
+# [2,]    0    1
